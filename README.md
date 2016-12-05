@@ -13,7 +13,7 @@ Cep Search is a page to consume the ViaCep API from Brazil cep consulting.
 License
 ----
 
-Copyright (c) 2015 sortear.me
+Copyright (c) 2016 wakecloud.net
 
 Licensed under the MIT license (see LICENSE file)
 
