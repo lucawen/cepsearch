@@ -21,7 +21,7 @@ var app = new Vue({
     lookupCep: _.debounce(function() {
       var app = this
       app.msg = "Procurando..."
-      axios.get('http://viacep.com.br/ws/'+app.cep+'/json')
+      axios.get('https://viacep.com.br/ws/'+app.cep+'/json')
             .then(function (response) {
               console.log(response.data);
               if(response.data.erro){
