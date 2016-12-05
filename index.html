@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Busca Cep | Wakecloud.net</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+
+<style>
+  [v-cloak] {display: none;}
+</style>
+  <body>
+    <div class="se-pre-con"></div>
+    <div id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col s8 offset-s2 m6 offset-m3 l6 offset-l3">
+            <div class="lead-form">
+              <h1 class="center">Busca CEP</h1>
+              <hr />
+              <br/>
+              <div class="row">
+                <div class="input-field col s12 m6 offset-m3">
+                  <h6>CEP</h6>
+                  <input placeholder="Ex: 30421138" id="cepInput" maxlength="8" type="text" class="form-control" v-model="cep">
+                </div>
+              </div>
+              <div class="row result" v-cloak >
+                <h6 class="city-span center" v-cloak v-show="isResult == false"> {{msg}}</h6>
+                <div v-show="isResult">
+                  <div class="col s6 m5 l4 offset-l2">
+                    Logradouro:
+                  </div>
+                  <div class="col s6 m7 l6" v-text="logradouro"></div>
+
+                  <div class="col s6 m5 l4 offset-l2">
+                    Bairro:
+                  </div>
+                  <div class="col s6 m7 l6" v-text="bairro"></div>
+
+                  <div class="col s6 m5 l4 offset-l2">
+                    Localidade:
+                  </div>
+                  <div class="col s6 m7 l6" v-text="localidade"></div>
+                </div>
+              </div>
+              <div class="center">
+                <span>Powered by <a href="https://wakecloud.net/">Wakecloud.net</a></span>
+                <img src="assets/logo.png" alt="Wakecloud.net" height="24px" width="119px">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+
+  <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+  <script src="assets/app.js"></script>
+
+  <script>
+  $(window).load(function() {
+		$(".se-pre-con").fadeOut("slow");;
+	});
+  </script>
+</html>
