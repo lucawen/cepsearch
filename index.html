@@ -33,20 +33,20 @@
               <div class="row result" v-cloak >
                 <h6 class="city-span center" v-cloak v-show="isResult == false"> {{msg}}</h6>
                 <div v-show="isResult">
-                  <div class="col s6 m5 l4 offset-l2">
+                  <div v-show="logradouro" class="col s6 m5 l4 offset-l2">
                     Logradouro:
                   </div>
-                  <div class="col s6 m7 l6" v-text="logradouro"></div>
+                  <div v-show="logradouro" class="col s6 m7 l6" v-text="logradouro"></div>
 
-                  <div class="col s6 m5 l4 offset-l2">
+                  <div v-show="bairro" class="col s6 m5 l4 offset-l2">
                     Bairro:
                   </div>
-                  <div class="col s6 m7 l6" v-text="bairro"></div>
+                  <div v-show="bairro" class="col s6 m7 l6" v-text="bairro"></div>
 
-                  <div class="col s6 m5 l4 offset-l2">
+                  <div v-show="localidade" class="col s6 m5 l4 offset-l2">
                     Localidade:
                   </div>
-                  <div class="col s6 m7 l6" v-text="localidade"></div>
+                  <div v-show="localidade" class="col s6 m7 l6" v-text="localidade"></div>
                 </div>
               </div>
               <div class="center">
